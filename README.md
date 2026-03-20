@@ -193,7 +193,7 @@ My AI classification and a rule-based Excel IF formula agreed 68.2% of the time.
 Average 4th grade math proficiency (60.5%) and 8th grade math proficiency (59.7%) are nearly identical. There is almost no improvement between elementary and middle school years across the state. The jump to 77.3% at 10th grade partly reflects the Massachusetts graduation requirement, which drives intensive test preparation and gives students multiple retake opportunities for the 10th grade MCAS.
 
 ### 5. Top Math Schools and Economic Advantage
-None of the top 10 schools by 4th grade math proficiency have more than 36% economically disadvantaged students. The pattern holds at 8th grade and 10th grade without exception. Economic advantage does not just correlate with better outcomes. It appears to be a prerequisite for reaching the top of the performance distribution in Massachusetts.
+None of the top 20 schools by 4th grade math proficiency have more than 36% economically disadvantaged students. The pattern holds at 8th grade and 10th grade without exception. Economic advantage does not just correlate with better outcomes. It appears to be a prerequisite for reaching the top of the performance distribution in Massachusetts.
 
 ### 6. Class Size and College Attendance
 The scatter plot revealed an unexpected upward trend between class size and college attendance. Wealthier districts tend to have both larger classes and higher college attendance, suggesting economic context is a stronger predictor of college attendance than class size alone. The relationship between class size and outcomes is not causal. It is a reflection of underlying economic advantage.
