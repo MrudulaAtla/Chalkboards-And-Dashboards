@@ -18,6 +18,8 @@ A state map of all 678 AI classified schools and bar charts showing struggling s
 A scatter plot exploring class size and college attendance, plus top math schools ranked by grade level( Grade 4, Grade 8, Grade 10).
 
 ![AI Insights Dashboard](dashboard1.png)
+
+
 ![State Overview Dashboard](dashboard2.png)
 
 ---
@@ -178,8 +180,6 @@ I classified the same five randomly selected schools twice each, with a half sec
  
 ## Key Findings
  
-## Key Findings
- 
 ### 1. The Most Urgent Schools
 18 schools are simultaneously At Risk on my classification and Level 3 or 4 on the state equity metric. They are failing on every available measure. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4). These schools span different towns across Massachusetts, confirming this is a statewide pattern not an isolated problem. This finding only emerged by comparing two completely different classification systems.
  
@@ -194,8 +194,39 @@ Average 4th grade math proficiency (60.5%) and 8th grade math proficiency (59.7%
  
 ### 5. Top Math Schools and Economic Advantage
 None of the top 20 schools by 4th grade math proficiency have more than 35% economically disadvantaged students. The correlation between wealth and academic performance is stark and consistent across all three grade levels analyzed.
+
+### 6. Class Size and College Attendance
+The scatter plot revealed an unexpected upward trend between class size and college attendance. Wealthier districts tend to have both larger classes and higher college attendance, suggesting economic context is a stronger predictor of college attendance than class size alone. The relationship between class size and outcomes is not causal. It is a reflection of underlying economic advantage.
+
+### 7. Three K-8 Schools Have Zero Math Proficiency
+Three schools in the struggling K-8 chart have no bar at all. This is not missing data. These schools reported 0% proficiency on 4th grade math, meaning not a single student scored Proficient or Advanced. Next Wave Junior High, Resiliency Middle School and Stone Day School all fall into this category. Stone Day School in Fall River also has only 9% English proficiency. These numbers 
+are not just low. They represent a complete breakdown of academic outcomes at the elementary level.
+
+### 8. The Wealthiest Schools Dominate the Top Math Rankings
+None of the top 10 schools by math proficiency at any grade level have more than 35% economically disadvantaged students. The pattern holds at 4th grade, 8th grade and 10th grade without exception. Economic advantage does not just correlate with better outcomes. It appears to be a prerequisite for reaching the top of the performance distribution in Massachusetts.
+
+
+ 
+
  
  
+---
+## Recommendations Based on Analysis 
+ 
+Based on the findings from this analysis, I would suggest the following actions for the Massachusetts Department of Education:
+
+### Immediate Intervention for the 18 Most Urgent Schools
+The 18 schools that are simultaneously At Risk on outcomes and Level 3 or 4 on equity need targeted intervention now. Boston Day and Evening Academy (9.8% graduation rate) and Dorchester Academy (16.4% graduation rate) should be prioritized. The combination of poor absolute outcomes and equity failures suggests systemic problems that require more than incremental improvement programs.
+ 
+### High Graduation Rates Are Hiding an Equity Problem
+46 schools are classified as Thriving on outcomes but rated Level 2 on equity. These schools are serving their advantaged students well but not closing gaps for disadvantaged groups. Strong overall graduation rates should not be allowed to mask unequal outcomes within a school. These schools should be required to publicly report disaggregated performance data by student group and set explicit targets for closing achievement gaps.
+ 
+### Investigate the Middle School Math Gap
+Statewide math proficiency at 4th grade is 60.5%. At 8th grade it is 59.7%. Four years of middle school and almost nothing changed. This is not a data artifact. It is a signal that something in the middle school math pipeline is not working and it deserves a dedicated investigation into curriculum, instruction and teacher support at that level.
+
+### The AI Classification Could Be an Early Warning Tool
+The Massachusetts state system rates schools after problems have already become serious. An AI based classification system updated annually with new DOE data could flag schools whose trajectory is worsening much earlier, before they reach Level 3 or 4. Early identification means earlier intervention and better outcomes for students.
+
 ---
  
 ## Files in This Repository
