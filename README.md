@@ -28,7 +28,7 @@ A scatter plot exploring class size and college attendance, plus top math school
 
 **18 Massachusetts public high schools are simultaneously failing on student outcomes and failing on equity. These schools are the need for most urgent intervention.**
 
-My AI classification rated these 18 schools as At Risk based on graduation rates, college attendance, SAT scores and AP performance. The Massachusetts state accountability system independently rated them Level 3 or Level 4, meaning they are also failing to close achievement gaps between student groups. Two completely different measurement systems reached the same conclusion about the same 18 schools. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4). 
+My AI classification rated these 18 high schools as At Risk based on graduation rates, college attendance, SAT scores and AP performance. The Massachusetts state accountability system independently rated them Level 3 or Level 4, meaning they are also failing to close achievement gaps between student groups. Two completely different measurement systems reached the same conclusion about the same 18 schools. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4). 
 
 But the more nuanced finding sits on the other end of the spectrum. 40 high schools were classified as Thriving by my AI system. Schools like Boston Latin (98.1% graduation rate) and Andover High (95.7% graduation rate) have numbers that look exceptional. Yet the state rated all 40 of them Level 2, meaning they are not closing achievement gaps for their disadvantaged students. These schools are doing very well for their advantaged students. They are not lifting everyone equally.
 
@@ -181,7 +181,7 @@ I classified the same five randomly selected schools twice each, with a half sec
 ## Key Findings
 
 ### 1. The Most Urgent Schools
-18 schools are simultaneously At Risk on my classification and Level 3 or 4 on the state equity metric. They are failing on every available measure. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4). These schools span different towns across Massachusetts, confirming this is a statewide pattern not an isolated problem. This finding only emerged by comparing two completely different classification systems.
+18 schools are simultaneously At Risk on my AI classification and Level 3 or 4 on the state equity metric. They are failing on every available measure. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4). These schools span different towns across Massachusetts, confirming this is a statewide pattern not an isolated problem. This finding only emerged by comparing two completely different classification systems.
 
 ### 2. The Outcomes vs Equity Gap
 40 high schools are Thriving on graduation and college attendance but rated Level 2 on the state equity metric. They are serving their advantaged students well. They are not closing achievement gaps for disadvantaged groups. Strong overall numbers can hide deeply unequal outcomes within a school.
@@ -201,8 +201,6 @@ The scatter plot revealed an unexpected upward trend between class size and coll
 ### 7. Three Middle Schools Have Zero Math Proficiency
 Three schools in the struggling middle schools chart have no bar at all. This is not missing data. These schools reported 0% proficiency on 8th grade math, meaning not a single student scored Proficient or Advanced. Next Wave Junior High, Resiliency Middle School and Stone Day School all fall into this category. Stone Day School in Fall River also has only 9% English proficiency. These numbers are not just low. They represent a complete breakdown of academic outcomes at the middle school level.
 
-### 8. The Wealthiest Schools Dominate the Top Math Rankings
-None of the top 10 schools by math proficiency at any grade level have more than 35.8% economically disadvantaged students. The pattern holds at 4th grade, 8th grade and 10th grade without exception. Economic advantage does not just correlate with better outcomes. It appears to be a prerequisite for reaching the top of the performance distribution in Massachusetts.
 
 ---
 
@@ -211,7 +209,7 @@ None of the top 10 schools by math proficiency at any grade level have more than
 Based on the findings from this analysis, I would suggest the following actions for the Massachusetts Department of Education:
 
 ### The 18 Most Urgent Schools Need Immediate Attention
-Two different measurement systems flagged the same 18 schools as failing. That level of agreement is rare and should not be ignored. Boston Day and Evening Academy graduates fewer than 1 in 10 students. Dorchester Academy graduates fewer than 2 in 10. These are not borderline cases. They are schools where the system has broken down and incremental improvement programs are unlikely to be enough.
+Two different measurement systems flagged the same 18 schools as failing. That level of agreement should not be ignored. Boston Day and Evening Academy graduates fewer than 1 in 10 students. Dorchester Academy graduates fewer than 2 in 10. These are not borderline cases. They are schools where the system has broken down and incremental improvement programs are unlikely to be enough.
 
 ### High Graduation Rates Are Hiding an Equity Problem
 40 schools look excellent on paper but the state has flagged every single one of them for not closing achievement gaps. A school that graduates 95% of its students but leaves its disadvantaged students behind is not doing its job fully. Overall averages should never be the only measure of a school's success. Disaggregated data by student group should be publicly reported and acted on.
@@ -271,7 +269,7 @@ It costs about 15 times less than gpt-4o. After running the full classification 
 
 1. **Single year snapshot.** This analysis is based on 2017 data only. School performance, accountability levels and demographic compositions may have changed significantly since then.
 
-2. **Coverage is 36%.** 1,183 schools were excluded because they lacked sufficient data for meaningful classification. This is not a complete picture of all Massachusetts schools.
+2. **Coverage is 36% for AI classification.** 1,183 schools were excluded because they lacked sufficient data for meaningful classification. This is not a complete picture of all Massachusetts schools.
 
 3. **Column selection was judgment based.** The columns passed to the AI were selected based on domain knowledge and reasoning about what matters in education. No formal statistical feature selection was run to validate these choices.
 
