@@ -33,7 +33,6 @@ But the more nuanced finding sits on the other end of the spectrum. 40 high scho
  
 Neither of these findings was visible until I built my own classification system and compared it to the state's official data. That comparison is what this project is really about.
  
-![Key Finding — Outcomes vs Equity](images/key_finding.png)
  
 ![18 Most Urgent Schools — At Risk and Level 3/4](images/finding_18_atrisk.png)
  
