@@ -48,7 +48,7 @@ This project set out to answer four questions that a Massachusetts school board 
  
 Each question has a dedicated view in the Tableau dashboards. Questions 1 and 4 use the AI enriched dataset of 678 classified schools. Questions 2 and 3 use the full original dataset of 1,861 schools because those questions benefit from the complete picture.
  
-The core question driving the AI work was different though. Can AI surface insights from this dataset that Tableau alone cannot show? The answer turned out to be yes. But only after rigorous validation of the AI output.
+The deeper question I was trying to answer was different though. Can AI surface insights from this dataset that Tableau alone cannot show? The answer turned out to be yes. But only after rigorous validation of the AI output.
  
 ---
  
