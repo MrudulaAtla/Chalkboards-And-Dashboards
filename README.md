@@ -356,7 +356,9 @@ The OpenAI API key has been removed from the notebook before publishing. Replace
 **Mrudula Reddy Atla**
  
 Dataset: Massachusetts Department of Education 2017.
+
 API: OpenAI gpt-4o-mini.
+
 Visualization: Tableau Public.
  
 *Chalkboards and Dashboards - MA Schools Analysis 2017*
