@@ -17,9 +17,9 @@ A state map of all 678 AI classified schools and bar charts showing struggling s
 [**Dashboard 2: State Overview Dashboard**](https://public.tableau.com/views/ChalkboardsandDashboards-MASchoolsAnalysis/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 A scatter plot exploring class size and college attendance, plus top math schools ranked by grade level (Grade 4, Grade 8, Grade 10).
  
-![AI Insights Dashboard](dashboard1.png)
+![AI Insights Dashboard](images/dashboard1_full.png)
  
-![State Overview Dashboard](dashboard2.png)
+![State Overview Dashboard](images/dashboard2_full.png)
  
 ---
  
@@ -32,6 +32,12 @@ My AI classification rated these 18 high schools as At Risk based on graduation 
 But the more nuanced finding sits on the other end of the spectrum. 40 high schools were classified as Thriving by my AI system. Schools like Boston Latin (98.1% graduation rate) and Andover High (95.7% graduation rate) have numbers that look exceptional. Yet the state rated all 40 of them Level 2, meaning they are not closing achievement gaps for their disadvantaged students. These schools are doing very well for their advantaged students. They are not lifting everyone equally.
  
 Neither of these findings was visible until I built my own classification system and compared it to the state's official data. That comparison is what this project is really about.
+ 
+![Key Finding — Outcomes vs Equity](images/key_finding.png)
+ 
+![18 Most Urgent Schools — At Risk and Level 3/4](images/finding_18_atrisk.png)
+ 
+![40 Schools — Thriving on Outcomes but Level 2 on Equity](images/finding_40_thriving_level2.png)
  
 ---
  
@@ -153,6 +159,8 @@ At Risk        27   (8%)
 Error           1   (0%)
 ```
  
+![AI Classification vs State Level](images/AI_vs_state.png)
+ 
 ---
  
 ## Validating the AI Output
@@ -171,8 +179,12 @@ At Risk       42.5%
  
 Thriving schools averaged 96.6% graduation down to At Risk schools averaging 42.5%. Every single metric moved in exactly the right direction across all four tiers. This was the strongest validation result because it showed the classifications were statistically sound at a population level, not just for individual schools.
  
+![Tier Progression Check](images/tier_progression.png)
+ 
 ### Spot Check
 I searched for obvious contradictions. Schools labeled Thriving with graduation rates below 80%. Schools labeled At Risk with graduation rates above 90%. These would represent clear misclassifications. Zero such schools were found. The spot check does not prove the classifications are perfect but it confirms there are no glaring errors that would undermine the credibility of the analysis.
+ 
+![Spot Check — Zero Misclassifications Found](images/spot_check.png)
  
 ### Consistency Check
 I classified the same five randomly selected schools twice each, with a half second pause between the two calls. All five got identical results both times. The consistency rate was 100%, which confirmed the prompt is clear and specific enough that the model reaches the same conclusion when given the same data twice. A low consistency rate would have indicated the prompt was too ambiguous and the classifications could not be trusted.
@@ -196,17 +208,31 @@ My AI classification and a rule-based Excel IF formula agreed 68.2% of the time.
  
 The Excel IF thresholds were defined before running the AI classification. Thriving required graduation above 90%, college attendance above 70% and dropout below 5%. Performing required graduation above 75%, college attendance above 55% and dropout below 10%. These thresholds were based on reasonable educational benchmarks and were not adjusted after seeing the AI output. This matters because it means the comparison is honest. The Excel formula was not tuned to match the AI.
  
+![AI vs Excel IF Classification Comparison](images/excel_vs_if.png)
+ 
 ### 4. Math Performance Across Grade Levels
 Average 4th grade math proficiency (60.5%) and 8th grade math proficiency (59.7%) are nearly identical. There is almost no improvement between elementary and middle school years across the state. The jump to 77.3% at 10th grade partly reflects the Massachusetts graduation requirement, which drives intensive test preparation and gives students multiple retake opportunities for the 10th grade MCAS.
  
 ### 5. Top Math Schools and Economic Advantage
 None of the top 20 schools by 4th grade math proficiency have more than 35.8% economically disadvantaged students. The pattern holds at 8th grade and 10th grade without exception. Economic advantage does not just correlate with better outcomes. It appears to be a prerequisite for reaching the top of the performance distribution in Massachusetts.
  
+![Top 4th Grade Math Schools](images/top_4th_grade.png)
+ 
+![Top 10th Grade Math Schools](images/top_10th_grade.png)
+ 
 ### 6. Class Size and College Attendance
 The scatter plot revealed an unexpected upward trend between class size and college attendance. Wealthier districts tend to have both larger classes and higher college attendance, suggesting economic context is a stronger predictor of college attendance than class size alone. The relationship between class size and outcomes is not causal. It is a reflection of underlying economic advantage.
  
+![Class Size vs College Attendance](images/scatter_classsize_college.png)
+ 
 ### 7. Three Middle Schools Have Zero Math Proficiency
 Three schools in the struggling middle schools chart have no bar at all. This is not missing data. These schools reported 0% proficiency on 8th grade math, meaning not a single student scored Proficient or Advanced. Next Wave Junior High, Resiliency Middle School and Stone Day School all fall into this category. Stone Day School in Fall River also has only 9% English proficiency. These numbers are not just low. They represent a complete breakdown of academic outcomes at the middle school level.
+ 
+![Struggling High Schools](images/struggling_highschools.png)
+ 
+![Struggling Middle Schools](images/struggling_middleschools.png)
+ 
+![State Map — All 678 AI-Classified Schools](images/map_boston_zoomed.png)
  
 ---
  
