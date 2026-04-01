@@ -1,8 +1,9 @@
 # Chalkboards and Dashboards
-### AI-Augmented Analysis of Massachusetts Public Schools
- 
+### A data analytics portfolio project combining Python, the OpenAI API and Tableau to generate deeper insights from the Massachusetts Department of Education dataset.
+
+
 A data analytics portfolio project combining Python, the OpenAI API and Tableau to generate deeper insights from the Massachusetts Department of Education dataset.
- 
+
 ---
  
 ## Live Dashboards
@@ -22,12 +23,33 @@ A scatter plot exploring class size and college attendance, plus top math school
 ![State Overview Dashboard](images/dashboard2_full.png)
  
 ---
+## Why I Built This
  
+The Massachusetts Department of Education publishes 299 columns of data per school for 1,861 schools — over half a million data points. The dataset already includes an official state accountability rating (Level 1–5) that measures equity: whether schools are closing achievement gaps between student subgroups like low-income students, students with disabilities. But this system says nothing about absolute outcomes of graduation rates, college attendance, SAT scores or AP performance.
+ 
+I built a second classification system using GPT-4o-mini through the OpenAI API to evaluate outcomes directly, then compared the two side by side. The comparison revealed patterns neither system could show alone.
+ 
+This project set out to answer four questions that a Massachusetts school board might actually ask:
+ 
+1. What is the overall state of the public school system?
+2. How does class size affect college attendance?
+3. Which schools are the top math performers in the state?
+4. Which schools are struggling the most and need urgent attention?
+ 
+Each question has a dedicated view in the Tableau dashboards. Questions 1 and 4 use the AI enriched dataset of 678 classified schools. Questions 2 and 3 use the full original dataset of 1,861 schools because those questions benefit from the complete picture.
+
+
 ## The Most Surprising Finding
  
 **18 Massachusetts public high schools are simultaneously failing on student outcomes and failing on equity. These schools are the most urgent candidates for intervention.**
  
-My AI classification rated these 18 high schools as At Risk based on graduation rates, college attendance, SAT scores and AP performance. The Massachusetts state accountability system independently rated them Level 3 or Level 4, meaning they are also failing to close achievement gaps between student groups. Two completely different measurement systems reached the same conclusion about the same 18 schools. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4).
+My AI classification rated these 18 high schools as At Risk based on graduation rates, college attendance, SAT scores and AP performance. The Massachusetts state accountability system independently rated them Level 3 or Level 4, meaning they are also failing to close achievement gaps between student groups. Two completely different measurement systems reached the same conclusion about the same 18 schools.
+ 
+What makes this overlap meaningful is that the two systems were designed to measure entirely different things. The state system evaluates whether achievement gaps between student groups are narrowing. My system evaluates whether absolute outcomes like graduation and college attendance meet reasonable benchmarks. When two independent systems that measure different dimensions both flag the same schools, the signal is stronger than either system alone.
+ 
+Ten of these 18 schools are in the City of Boston. The remaining eight are in cities like Springfield, the second largest city in Massachusetts, New Bedford, a community with high poverty, and other urban centers including Fall River, Brockton, Holyoke, Lowell and Lynn. This is an urban problem, concentrated in communities facing deep economic challenges.
+ 
+**An important note on context:** Several of these schools are alternative or therapeutic programs that exist specifically to serve students who dropped out of or were failed by traditional schools. Boston Day and Evening Academy, for example, is a competency-based charter school designed to re-engage students aged 16 to 22 who are over-age for their grade level or returning after dropping out. Dorchester Academy was similarly restructured as an alternative program for the academically challenged students. Resiliency Preparatory School in Fall River is also classified as an alternative school. Their low graduation rates are real, but they reflect the population these schools intentionally serve, not a failure of effort. Flagging them alongside traditional high schools without this context would be misleading.
  
 But the more nuanced finding sits on the other end of the spectrum. 40 high schools were classified as Thriving by my AI system. Schools like Boston Latin (98.1% graduation rate) and Andover High (95.7% graduation rate) have numbers that look exceptional. Yet the state rated all 40 of them Level 2, meaning they are not closing achievement gaps for their disadvantaged students. These schools are doing very well for their advantaged students. They are not lifting everyone equally.
  
@@ -40,20 +62,7 @@ Neither of these findings was visible until I built my own classification system
  
 ---
  
-## Why I Built This
- 
-The Massachusetts Department of Education publishes school performance data for 1,861 schools across 299 columns. 299 columns of data exist for each school, but very little of it has been turned into actionable insight. That is what I intend to do with this project.
- 
-This project set out to answer four questions that a Massachusetts school board might actually ask:
- 
-1. What is the overall state of the public school system?
-2. How does class size affect college attendance?
-3. Which schools are the top math performers in the state?
-4. Which schools are struggling the most and need urgent attention?
- 
-Each question has a dedicated view in the Tableau dashboards. Questions 1 and 4 use the AI enriched dataset of 678 classified schools. Questions 2 and 3 use the full original dataset of 1,861 schools because those questions benefit from the complete picture.
- 
-The deeper question I was trying to answer was different though. Can AI surface insights from this dataset that Tableau alone cannot show? The answer turned out to be yes. But only after rigorous validation of the AI output.
+
  
 ---
  
@@ -82,6 +91,9 @@ The equity gap finding, 40 schools Thriving on outcomes but failing on equity, w
  
 ### Communication
 The AI enriched data was designed from the start to feed directly into Tableau. AI generated insights appear as tooltip on every school. The dashboard was built to answer 4 specific questions a school board would actually ask.
+
+### Domain Research
+Researching the individual schools after the analysis revealed critical context that the data alone could not provide. Several of the lowest-performing schools turned out to be alternative or therapeutic programs serving students who had already left traditional education. Understanding what these schools actually do required looking beyond the spreadsheet and that research step turned out to be just as important as the data analysis itself.
  
 ---
  
@@ -94,7 +106,7 @@ The AI enriched data was designed from the start to feed directly into Tableau. 
 - **Scope:** Public schools only. Private schools in Massachusetts are not required to report data to the state DOE and are therefore not included.
  
 ### The State Accountability System
-The dataset includes the Massachusetts state official school rating, which classifies every public school into one of five levels based on whether achievement gaps between student groups are closing over time.
+The dataset includes the Massachusetts state official school rating, which classifies every public school into one of five levels based on whether the school is closing performance gaps between its strongest and weakest student groups, such as the gap between low-income and higher-income students, or between students with disabilities and those without.
  
 | Level | Meaning | Count in Dataset |
 |---|---|---|
@@ -176,7 +188,7 @@ Struggling    75.7%
 At Risk       42.5%
 ```
  
-Thriving schools averaged 96.6% graduation down to At Risk schools averaging 42.5%. Every single metric moved in exactly the right direction across all four tiers. This was the strongest validation result because it showed the classifications were statistically sound at a population level, not just for individual schools.
+Thriving schools averaged 96.6% graduation down to At Risk schools averaging 42.5%. Every metric moved in exactly the right direction across all four tiers. This was the strongest validation result because it showed the classifications were statistically sound at a population level, not just for individual schools.
  
 ![Tier Progression Check](images/tier_progression.png)
  
@@ -197,8 +209,10 @@ It is also worth noting that all three validation checks were run on high school
 ## Key Findings
  
 ### 1. The Most Urgent Schools
-18 schools are simultaneously At Risk on my AI classification and Level 3 or 4 on the state equity metric. They are failing on every available measure. Among them are Boston Day and Evening Academy in Roxbury (9.8% graduation rate, Level 3), Dorchester Academy in Dorchester (16.4% graduation rate, Level 4), William McKinley School in Boston (29.4% graduation rate, Level 3) and Madison Park High in Roxbury (59.1% graduation rate, Level 4). These schools span different towns across Massachusetts, confirming this is a statewide pattern not an isolated problem. This finding only emerged by comparing two completely different classification systems.
+18 schools are simultaneously At Risk on my AI classification and Level 3 or 4 on the state equity metric. Ten of these schools are in the City of Boston. The remaining eight are in cities like Springfield, the second largest city in Massachusetts, New Bedford, a community with high poverty, and other urban centers including Fall River, Brockton, Holyoke, Lowell and Lynn. This is an urban problem, concentrated in communities facing deep economic challenges. This finding only emerged by comparing two completely different classification systems.
  
+**Important context:** Several of these schools are alternative or therapeutic programs designed to re-engage students who had already left traditional schools. Boston Day and Evening Academy serves students aged 16 to 22 who are returning after dropping out. Dorchester Academy was restructured as an alternative program. Their graduation rates are low, but they reflect the population these schools intentionally serve, not a failure of effort. Comparing them to traditional high schools without this context would be misleading.
+
 ### 2. The Outcomes vs Equity Gap
 40 high schools are Thriving on graduation and college attendance but rated Level 2 on the state equity metric. They are serving their advantaged students well. They are not closing achievement gaps for disadvantaged groups. Strong overall numbers can hide deeply unequal outcomes within a school.
  
@@ -225,7 +239,9 @@ The scatter plot revealed an unexpected upward trend between class size and coll
 ![Class Size vs College Attendance](images/scatter_classsize_college.png)
  
 ### 7. Three Middle Schools Have Zero Math Proficiency
-Three schools in the struggling middle schools chart have no bar at all. This is not missing data. These schools reported 0% proficiency on 8th grade math, meaning not a single student scored Proficient or Advanced. Next Wave Junior High, Resiliency Middle School and Stone Day School all fall into this category. Stone Day School in Fall River also has only 9% English proficiency. These numbers are not just low. They represent a complete breakdown of academic outcomes at the middle school level.
+Three schools in the struggling middle schools chart have no bar at all. This is not missing data. These schools reported 0% proficiency on 8th grade math, meaning not a single student scored Proficient or Advanced. Next Wave Junior High, Resiliency Middle School and Stone Day School all fall into this category. Stone Day School in Fall River also has only 9% English proficiency.
+ 
+**Important context:** Next Wave Junior High in Somerville is an alternative therapeutic school that serves students with different learning styles and needs, with a student-teacher ratio of about 2:1. Stone Day School (officially Stone Therapeutic Day School) serves students with therapeutic needs in Fall River. These are not traditional middle schools, and their 0% proficiency rates reflect the severity of the challenges their students face, not a lack of effort.
  
 ![Struggling High Schools](images/struggling_highschools.png)
  
@@ -240,7 +256,7 @@ Three schools in the struggling middle schools chart have no bar at all. This is
 Based on the findings from this analysis, I would suggest the following actions for the Massachusetts Department of Education:
  
 ### The 18 Most Urgent Schools Need Immediate Attention
-Two different measurement systems flagged the same 18 schools as failing. That level of agreement should not be ignored. Boston Day and Evening Academy graduates fewer than 1 in 10 students. Dorchester Academy graduates fewer than 2 in 10. These are not borderline cases. They are schools where the system has broken down and incremental improvement programs are unlikely to be enough.
+Two different measurement systems flagged the same 18 schools as struggling. That level of agreement should not be ignored. However, it is important to note that several of these schools are alternative programs specifically designed to serve students who dropped out of or were failed by traditional schools. Boston Day and Evening Academy, for example, re-engages students aged 16 to 22 who are returning after dropping out, its low graduation rate reflects the population it serves, not a lack of effort. For the traditional high schools in this group, intervention is clearly needed. For the alternative schools, the question is different: are they getting the resources and support they need to serve the students who have nowhere else to go?
  
 ### High Graduation Rates Are Hiding an Equity Problem
 40 schools look excellent on paper but the state has flagged every single one of them for not closing achievement gaps. A school that graduates 95% of its students but leaves its disadvantaged students behind is not doing its job fully. Overall averages should never be the only measure of a school's success. Disaggregated data by student group should be publicly reported and acted on.
@@ -326,6 +342,9 @@ It costs about 15 times less than gpt-4o. After running the full classification 
 8. **Small school sample sizes are not accounted for.** A school with 30 students where 5 fail MCAS looks statistically worse than a school with 300 students where 50 fail, even though the larger school has ten times more struggling students. The AI does not account for statistical significance of small populations.
  
 9. **AI classifications are non-deterministic.** GPT-4o-mini does not guarantee identical outputs for the same input across different runs. The numbers in this README reflect the original run saved in the enriched CSV files. Running v4 fresh may produce slightly different classifications and findings.
+
+10. **Alternative and therapeutic schools are not separately adjusted.** Several of the lowest-performing schools in this analysis are alternative or therapeutic programs serving students who already left traditional education. Their metrics are not directly comparable to traditional schools, and this analysis does not adjust for that difference.
+ 
  
 ---
  
@@ -338,6 +357,7 @@ It costs about 15 times less than gpt-4o. After running the full classification 
 - Automate the pipeline so it updates classifications each year when new DOE data is released
 - Generate narrative summaries for K-8 and middle schools ranked by MCAS scores to complete the plain language insight layer across all school types
 - Build Excel IF comparisons for K-8 and middle schools using MCAS thresholds to extend the AI vs rules analysis beyond high schools
+- Build a context-adjusted classification that accounts for school type (traditional vs. alternative) and socioeconomic factors to make comparisons fairer
  
 ---
  
